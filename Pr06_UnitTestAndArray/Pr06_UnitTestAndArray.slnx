@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="LommeregnerTest/LommeregnerTest.csproj" />
+  <Project Path="Pr06_UnitTestAndArray/Pr06_UnitTestAndArray.csproj" />
+</Solution>
