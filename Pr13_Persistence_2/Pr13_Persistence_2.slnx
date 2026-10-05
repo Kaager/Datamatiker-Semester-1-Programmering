@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="PersistensTest/PersistensTest.csproj" />
+  <Project Path="Pr13_Persistence_2/Pr13_Persistence_2.csproj" />
+</Solution>
