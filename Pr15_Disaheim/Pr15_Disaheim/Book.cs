@@ -29,22 +29,21 @@ namespace Pr15_Disaheim
         }
 
         // Constructors
-        public Book(string itemID)
-        {
-            _itemID = itemID;
-        }
-
-        public Book(string itemID, string title)
-        {
-            _itemID = itemID;
-            _title = title;
-        }
-
         public Book (string itemID, string title, double price)
         {
             _itemID = itemID;
             _title = title;
             _price = price;
+        }
+        
+
+        public Book(string itemID, string title) :
+            this (itemID, title, 0)
+        {
+        }
+        public Book(string itemID) : 
+            this(itemID, string.Empty, 0)
+        {
         }
 
         // Methods
