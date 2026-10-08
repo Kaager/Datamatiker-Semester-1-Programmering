@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Pr15_Disaheim
 {
-    public static class Utility
+    public  class Utility
     {
-        public static double GetValueOfBook(Book book)
+        public  double GetValueOfBook(Book book)
         {
             return book.Price;
         }
 
-        public static double GetValueOfAmulet(Amulet amulet)
+        public  double GetValueOfAmulet(Amulet amulet)
         {
             // Switch expression
             return amulet.Quality switch
