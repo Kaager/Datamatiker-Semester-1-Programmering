@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="OrangeTreeGAITest/OrangeTreeGAITest.csproj" />
+  <Project Path="Pr16_OrangeTreeGAI/Pr16_OrangeTreeGAI.csproj" />
+</Solution>
