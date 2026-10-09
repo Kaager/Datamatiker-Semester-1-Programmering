@@ -8,11 +8,13 @@ namespace Pr15_Disaheim
     {
         public List<Book> Books { get; set; }
         public List<Amulet> Amulets { get; set; }
+        public List<Course> Courses { get; set; }
 
         public Controller()
         {
             Books = new();
             Amulets = new();
+            Courses = new();
             // Both can use this syntax:
             //Books = [];
             //Amulets = [];
@@ -26,6 +28,11 @@ namespace Pr15_Disaheim
         public void AddToList(Amulet amulet)
         {
             Amulets.Add(amulet);
+        }
+
+        public void AddToList(Course course)
+        {
+            Courses.Add(course);
         }
     }
 }

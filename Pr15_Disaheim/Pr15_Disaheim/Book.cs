@@ -4,19 +4,19 @@ using System.Text;
 
 namespace Pr15_Disaheim
 {
-    public class Book
+    public class Book : Merchandise
     {
         // Fields
 
         // Properties
-        public string ItemID { get; set; }
         public string Title { get; set; }
         public double Price { get; set; }
 
         // Constructors
         public Book (string itemID, string title, double price)
+            //: base (itemID)
         {
-            ItemID = itemID;
+            ItemId = itemID;
             Title = title;
             Price = price;
         }
@@ -34,7 +34,7 @@ namespace Pr15_Disaheim
         // Methods
         public override string ToString()
         {
-            return $"ItemId: {ItemID}, Title: {Title}, Price: {Price}";
+            return $"ItemId: {ItemId}, Title: {Title}, Price: {Price}";
         }
     }
 }
