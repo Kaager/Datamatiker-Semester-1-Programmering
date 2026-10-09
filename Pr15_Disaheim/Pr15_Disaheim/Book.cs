@@ -7,33 +7,18 @@ namespace Pr15_Disaheim
     public class Book
     {
         // Fields
-        private string _itemID;
-        private string _title;
-        private double _price;
 
         // Properties
-        public string ItemID
-        {
-            get => _itemID;
-            set => _itemID = value;
-        }
-        public string Title
-        {
-            get => _title;
-            set => _title = value;
-        }
-        public double Price
-        {
-            get => _price;
-            set => _price = value;
-        }
+        public string ItemID { get; set; }
+        public string Title { get; set; }
+        public double Price { get; set; }
 
         // Constructors
         public Book (string itemID, string title, double price)
         {
-            _itemID = itemID;
-            _title = title;
-            _price = price;
+            ItemID = itemID;
+            Title = title;
+            Price = price;
         }
         
 
@@ -49,7 +34,7 @@ namespace Pr15_Disaheim
         // Methods
         public override string ToString()
         {
-            return $"ItemId: {_itemID}, Title: {_title}, Price: {_price}";
+            return $"ItemId: {ItemID}, Title: {Title}, Price: {Price}";
         }
     }
 }

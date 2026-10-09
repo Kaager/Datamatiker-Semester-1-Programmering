@@ -7,35 +7,20 @@ namespace Pr15_Disaheim
     public class Amulet
     {
         // Fields
-        private string _itemID;
-        private string _design;
-        private Level _quality;
 
         // Properties
-        public string ItemID
-        {
-            get => _itemID;
-            set => _itemID = value;
-        }
+        public string ItemID { get; set; }
 
-        public string Design
-        {
-            get => _design;
-            set => _design = value;
-        }
+        public string Design { get; set; }
 
-        public Level Quality
-        {
-            get => _quality;
-            set => _quality = value;
-        }
+        public Level Quality { get; set; }
 
         // Constructors
         public Amulet(string itemID, Level quality, string desing)
         {
-            _itemID = itemID;
-            _quality = quality;
-            _design = desing;
+            ItemID = itemID;
+            Quality = quality;
+            Design = desing;
         }
 
         public Amulet(string itemID, Level quality) :
@@ -50,7 +35,7 @@ namespace Pr15_Disaheim
         // Methods
         public override string ToString()
         {
-            return $"ItemId: {_itemID}, Quality: {_quality}, Design: {_design}";
+            return $"ItemId: {ItemID}, Quality: {Quality}, Design: {Design}";
         }
 
     }
