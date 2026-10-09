@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Pr15_Disaheim;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Pr15_Disaheim
+namespace UtilityLib
 {
     public  class Utility
     {
@@ -37,6 +38,14 @@ namespace Pr15_Disaheim
                     return 0.0;
             }
             */
+        }
+
+        public double GetValueOfCourse(Course course)
+        {
+            int commencedTime = course.DurationInMinutes / 60;
+            if ((course.DurationInMinutes % 60) > 0)
+                commencedTime++;
+            return 875.00 * commencedTime;
         }
     }
 }

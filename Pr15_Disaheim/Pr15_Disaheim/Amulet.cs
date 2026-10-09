@@ -4,21 +4,20 @@ using System.Text;
 
 namespace Pr15_Disaheim
 {
-    public class Amulet
+    public class Amulet : Merchandise
     {
         // Fields
 
         // Properties
-        public string ItemID { get; set; }
-
         public string Design { get; set; }
 
         public Level Quality { get; set; }
 
         // Constructors
         public Amulet(string itemID, Level quality, string desing)
+           // : base(itemID)
         {
-            ItemID = itemID;
+            ItemId = itemID;
             Quality = quality;
             Design = desing;
         }
@@ -35,7 +34,7 @@ namespace Pr15_Disaheim
         // Methods
         public override string ToString()
         {
-            return $"ItemId: {ItemID}, Quality: {Quality}, Design: {Design}";
+            return $"ItemId: {ItemId}, Quality: {Quality}, Design: {Design}";
         }
 
     }
