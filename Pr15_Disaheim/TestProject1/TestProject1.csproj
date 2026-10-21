@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pr15_Disaheim\Pr15_Disaheim.csproj" />
-    <ProjectReference Include="..\UtilityLib\UtilityLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
