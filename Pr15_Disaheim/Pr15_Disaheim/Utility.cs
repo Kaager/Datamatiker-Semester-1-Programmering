@@ -6,6 +6,10 @@ namespace Pr15_Disaheim
 {
     public  class Utility
     {
+        public double Low { get; set; } = 12.5;
+        public double Medium { get; set; } = 20.0;
+        public double High { get; set; } = 27.5;
+        public double PricePerHour { get; set; } = 875.0;
         public double GetValueOfMerchandise(Merchandise merchandise)
         {
             if (merchandise is Book aBook)
@@ -29,9 +33,9 @@ namespace Pr15_Disaheim
             // Switch expression
             return amulet.Quality switch
             {
-                Level.Low => 12.5,
-                Level.Medium => 20.0,
-                Level.High => 27.5,
+                Level.Low => Low,
+                Level.Medium => Medium,
+                Level.High => High,
                 _ => 0.0
             };
 
@@ -57,7 +61,7 @@ namespace Pr15_Disaheim
             int commencedTime = course.DurationInMinutes / 60;
             if ((course.DurationInMinutes % 60) > 0)
                 commencedTime++;
-            return 875.00 * commencedTime;
+            return PricePerHour * commencedTime;
         }
     }
 }
