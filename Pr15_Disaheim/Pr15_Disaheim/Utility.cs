@@ -6,12 +6,25 @@ namespace Pr15_Disaheim
 {
     public  class Utility
     {
-        public  double GetValueOfBook(Book book)
+        public double GetValueOfMerchandise(Merchandise merchandise)
+        {
+            if (merchandise is Book aBook)
+            {
+                return GetValueOfBook(aBook);
+            }
+            else if (merchandise is Amulet anAmulet)
+            {
+                return GetValueOfAmulet(anAmulet);
+            }
+            else
+                throw new NotSupportedException($"Merchandise type '{merchandise.GetType().Name}' is not supported.");
+        }
+        private double GetValueOfBook(Book book)
         {
             return book.Price;
         }
 
-        public  double GetValueOfAmulet(Amulet amulet)
+        private double GetValueOfAmulet(Amulet amulet)
         {
             // Switch expression
             return amulet.Quality switch
