@@ -36,5 +36,10 @@ namespace Pr15_Disaheim
         {
             return $"ItemId: {ItemId}, Title: {Title}, Price: {Price}";
         }
+
+        public override double GetValue()
+        {
+            return this.Price;
+        }
     }
 }

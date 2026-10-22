@@ -4,9 +4,10 @@ using System.Text;
 
 namespace Pr15_Disaheim
 {
-    public class Course
+    public class Course : IValuable
     {
         public string Name { get; set; }
+        public static double CourseHourValue { get; set; } = 875.0;
         public int DurationInMinutes { get; set; }
 
         public Course(string name, int durationInMinutes)
@@ -25,5 +26,12 @@ namespace Pr15_Disaheim
             return $"Name: {Name}, Duration in Minutes: {DurationInMinutes}";
         }
 
+        public double GetValue()
+        {
+            int commencedTime = this.DurationInMinutes / 60;
+            if ((this.DurationInMinutes % 60) > 0)
+                commencedTime++;
+            return CourseHourValue * commencedTime;
+        }
     }
 }
