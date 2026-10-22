@@ -23,7 +23,7 @@ namespace Pr15_Disaheim
 
         public override string ToString()
         {
-            return $"Name: {Name}, Duration in Minutes: {DurationInMinutes}";
+            return $"Name: {Name}, Duration in Minutes: {DurationInMinutes}, Value: {this.GetValue()}";
         }
 
         public double GetValue()
