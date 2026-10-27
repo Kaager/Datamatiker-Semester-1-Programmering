@@ -53,7 +53,7 @@ namespace Pr15_Disaheim
 
         public void Save()
         {
-            StreamWriter sw = new("ValuableRepository.txt");
+            using StreamWriter sw = new("ValuableRepository.txt");
 
             foreach (IValuable valuable in valuables)
             {
@@ -69,7 +69,7 @@ namespace Pr15_Disaheim
 
         public void Save(string fileName)
         {
-            StreamWriter sw = new(fileName);
+            using StreamWriter sw = new(fileName);
 
             foreach (IValuable valuable in valuables)
             {
