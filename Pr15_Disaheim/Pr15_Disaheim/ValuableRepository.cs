@@ -51,23 +51,7 @@ namespace Pr15_Disaheim
             return valuables.Count;
         }
 
-        public void Save()
-        {
-            using StreamWriter sw = new("ValuableRepository.txt");
-
-            foreach (IValuable valuable in valuables)
-            {
-                if (valuable is Book book)
-                    sw.WriteLine($"BOG;{book.ItemId};{book.Title};{book.GetValue()}");
-                else if (valuable is Amulet amulet)
-                    sw.WriteLine($"AMULET;{amulet.ItemId};{amulet.Quality};{amulet.Design}");
-                else if (valuable is Course course)
-                    sw.WriteLine($"KURSUS;{course.Name};{course.DurationInMinutes}");
-            }
-            sw.Close();
-        }
-
-        public void Save(string fileName)
+        public void Save(string fileName = "ValuableRepository.txt")
         {
             using StreamWriter sw = new(fileName);
 
@@ -83,31 +67,7 @@ namespace Pr15_Disaheim
             sw.Close();
         }
 
-        public void Load()
-        {
-            string fileName = "ValuableRepository.txt";
-
-            if (File.Exists(fileName)){
-                string[] linesOfText = File.ReadAllLines(fileName);
-
-                foreach (string line in linesOfText)
-                {
-                    string[] values = line.Split(';');
-                    IValuable? valuable = null;
-                    if (values[0] == "BOG")
-                        valuable = new Book(values[1], values[2], double.Parse(values[3]));
-                    else if (values[0] == "AMULET")
-                        valuable = new Amulet(values[1], Enum.Parse<Level>(values[2]), values[3]);
-                    else if (values[0] == "KURSUS")
-                        valuable = new Course(values[1], int.Parse(values[2]));
-
-                    if (valuable is not null)
-                        AddValuable(valuable);
-                }
-            }
-        }
-
-        public void Load(string fileName)
+        public void Load(string fileName = "ValuableRepository.txt")
         {
             if (File.Exists(fileName)){
                 string[] linesOfText = File.ReadAllLines(fileName);
