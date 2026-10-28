@@ -16,6 +16,26 @@ namespace Pr21_CustomExceptionHandling
                 Console.WriteLine(ex.Message);
             }
 
+            try
+            {
+                double doNotDoit = TotallySafe.Divider(0);
+                Console.WriteLine(doNotDoit);
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {
+                int thisIsInt = TotallySafe.StringToInt("somestringnotint");
+                Console.WriteLine(thisIsInt);
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
             Console.ReadLine();
 
         }
