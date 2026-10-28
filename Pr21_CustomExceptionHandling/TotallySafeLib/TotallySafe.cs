@@ -18,6 +18,9 @@ namespace TotallySafeLib
 
         public static int GetValueAtPosition(int positionInArray)
         {
+            if (positionInArray < 0)
+                throw new NegativeIndexOutOfRangeException("Index can't be negative. STOOOOP IT!!!!.");
+
             int[] intArray = { 1, 2, 3, 4, 5 };
             return intArray[positionInArray];
         }

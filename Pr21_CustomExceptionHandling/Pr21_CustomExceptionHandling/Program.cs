@@ -15,6 +15,10 @@ namespace Pr21_CustomExceptionHandling
             {
                 Console.WriteLine(ex.Message);
             }
+            catch (NegativeIndexOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
             try
             {
