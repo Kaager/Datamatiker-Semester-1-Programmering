@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Pr21_CustomExceptionHandling/Pr21_CustomExceptionHandling.csproj" />
+  <Project Path="TotallySafeLib/TotallySafeLib.csproj" />
+</Solution>
