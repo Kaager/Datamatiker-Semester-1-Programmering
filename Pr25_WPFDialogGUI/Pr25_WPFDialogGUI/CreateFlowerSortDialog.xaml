@@ -1,0 +1,29 @@
+﻿<Window x:Class="Pr25_WPFDialogGUI.CreateFlowerSortDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pr25_WPFDialogGUI"
+        mc:Ignorable="d"
+        Title="Opret BlomsterSort"
+        Height="475"
+        Width="575"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Label Content="Navn:" HorizontalAlignment="Left" Margin="40,52,0,0" VerticalAlignment="Top"/>
+        <Label Content="Billede (sti):" HorizontalAlignment="Left" Margin="40,97,0,0" VerticalAlignment="Top"/>
+        <Label Content="Produktionstid:" HorizontalAlignment="Left" Margin="40,288,0,0" VerticalAlignment="Top"/>
+        <Label Content="Halveringstid:" HorizontalAlignment="Left" Margin="40,331,0,0" VerticalAlignment="Top"/>
+        <Label Content="Størrelse:" HorizontalAlignment="Left" Margin="40,373,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="150,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="397" TextChanged="NameTextBox_TextChanged"/>
+        <TextBox x:Name="ImageTextBox" HorizontalAlignment="Left" Margin="150,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="332" LostFocus="ImageTextBox_LostFocus"/>
+        <TextBox x:Name="ProductionTimeTextBox" HorizontalAlignment="Left" Margin="150,292,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="397" TextChanged="ProductionTimeTextBox_TextChanged"/>
+        <TextBox x:Name="HalfTimeTextBox" HorizontalAlignment="Left" Margin="150,335,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="397" TextChanged="HalfTimeTextBox_TextChanged"/>
+        <TextBox x:Name="SizeTextBox" HorizontalAlignment="Left" Margin="150,377,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="397" TextChanged="SizeTextBox_TextChanged"/>
+
+        <Button x:Name="CancelButton" Content="Fortryd" HorizontalAlignment="Left" Margin="495,414,0,0" VerticalAlignment="Top" Width="52" Click="CancelButton_Click"/>
+        <Button x:Name="OKButton" Content="OK" HorizontalAlignment="Left" Margin="430,414,0,0" VerticalAlignment="Top" Width="52" Click="OKButton_Click" MouseEnter="OKButton_MouseEnter"/>
+        <Image x:Name="ImageImageBox" HorizontalAlignment="Left" Height="139" Margin="150,135,0,0" VerticalAlignment="Top" Width="395"/>
+        <Button x:Name="ChoosePictureButton" Content="Vælg..." HorizontalAlignment="Left" Margin="495,100,0,0" VerticalAlignment="Top" Width="52" Click="ChoosePictureButton_Click"/>
+    </Grid>
+</Window>
