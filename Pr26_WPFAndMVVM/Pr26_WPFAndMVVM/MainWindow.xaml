@@ -17,6 +17,8 @@
         <TextBox x:Name="SliderTextBox2" HorizontalAlignment="Left" Margin="400,251,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="229"/>
         <Label Content="{Binding Path=MyLabelText}" HorizontalAlignment="Left" Margin="80,309,0,0" VerticalAlignment="Top" Width="229"/>
         <Button x:Name="UpdateLabelButton" Content="Update Label" HorizontalAlignment="Left" Margin="447,287,0,0" VerticalAlignment="Top" Width="135" Height="44" Click="UpdateLabelButton_Click"/>
+        <Button x:Name="UpdateTextBoxButton" Content="Button" HorizontalAlignment="Left" Margin="447,361,0,0" VerticalAlignment="Top" Height="44" Width="135" Click="UpdateTextBoxButton_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="80,374,0,0" TextWrapping="Wrap" Text="{Binding MyTextBoxText}" VerticalAlignment="Top" Width="229"/>
 
     </Grid>
 </Window>

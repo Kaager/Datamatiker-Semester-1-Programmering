@@ -29,5 +29,10 @@ namespace Pr26_WPFAndMVVM
         {
             mvm.MyLabelText = DateTime.Now.ToString();
         }
+
+        private void UpdateTextBoxButton_Click(object sender, RoutedEventArgs e)
+        {
+            mvm.MyTextBoxText = DateTime.UtcNow.ToString();
+        }
     }
 }
