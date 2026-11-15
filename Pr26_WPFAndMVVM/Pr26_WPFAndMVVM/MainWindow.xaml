@@ -9,12 +9,14 @@
     <Grid>
         <Label Content="{Binding ElementName=SourceTextBox, Path=Text}" HorizontalAlignment="Left" Margin="80,69,0,0" VerticalAlignment="Top" Width="140" Height="28"/>
         <TextBox x:Name="SourceTextBox" HorizontalAlignment="Left" Margin="253,73,0,0" TextWrapping="Wrap" Text="TextBox1" VerticalAlignment="Top" Width="347"/>
-        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Margin="80,175,0,0" TextWrapping="Wrap" Text="{Binding ElementName=TextBox3, Path=Text, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" VerticalAlignment="Top" Width="229"/>
-        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Margin="400,175,0,0" TextWrapping="Wrap" Text="TextBox3" VerticalAlignment="Top" Width="229"/>
-        <Slider TickPlacement="BottomRight" TickFrequency="5" x:Name="TheSlider" HorizontalAlignment="Left" Margin="80,232,0,0" VerticalAlignment="Top" Width="229" Maximum="100" Minimum="0"/>
-        <TextBox x:Name="SliderTextBox" HorizontalAlignment="Left" Margin="400,232,0,0" TextWrapping="Wrap" Text="{Binding ElementName=TheSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="229"/>
-        <Slider TickPlacement="TopLeft" TickFrequency="5" Value="{Binding ElementName=SliderTextBox2, Path=Text}" HorizontalAlignment="Left" Margin="80,292,0,0" VerticalAlignment="Top" Width="229" Maximum="100" Minimum="0"/>
-        <TextBox x:Name="SliderTextBox2" HorizontalAlignment="Left" Margin="400,292,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="229"/>
+        <TextBox x:Name="TextBox2" HorizontalAlignment="Left" Margin="80,134,0,0" TextWrapping="Wrap" Text="{Binding ElementName=TextBox3, Path=Text, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" VerticalAlignment="Top" Width="229"/>
+        <TextBox x:Name="TextBox3" HorizontalAlignment="Left" Margin="400,134,0,0" TextWrapping="Wrap" Text="TextBox3" VerticalAlignment="Top" Width="229"/>
+        <Slider TickPlacement="BottomRight" TickFrequency="5" x:Name="TheSlider" HorizontalAlignment="Left" Margin="80,190,0,0" VerticalAlignment="Top" Width="229" Maximum="100" Minimum="0"/>
+        <TextBox x:Name="SliderTextBox" HorizontalAlignment="Left" Margin="400,190,0,0" TextWrapping="Wrap" Text="{Binding ElementName=TheSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="229"/>
+        <Slider TickPlacement="TopLeft" TickFrequency="5" Value="{Binding ElementName=SliderTextBox2, Path=Text}" HorizontalAlignment="Left" Margin="80,251,0,0" VerticalAlignment="Top" Width="229" Maximum="100" Minimum="0"/>
+        <TextBox x:Name="SliderTextBox2" HorizontalAlignment="Left" Margin="400,251,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="229"/>
+        <Label Content="{Binding Path=MyLabelText}" HorizontalAlignment="Left" Margin="80,309,0,0" VerticalAlignment="Top" Width="229"/>
+        <Button x:Name="UpdateLabelButton" Content="Update Label" HorizontalAlignment="Left" Margin="447,287,0,0" VerticalAlignment="Top" Width="135" Height="44" Click="UpdateLabelButton_Click"/>
 
     </Grid>
 </Window>
