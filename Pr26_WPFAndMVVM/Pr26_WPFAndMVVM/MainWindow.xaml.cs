@@ -16,9 +16,13 @@ namespace Pr26_WPFAndMVVM
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mvm = new();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = mvm;
         }
     }
 }
