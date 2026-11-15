@@ -15,7 +15,7 @@ namespace Pr26_WPFAndMVVM
             set
             {
                 _myLabelText = value;
-                OnPropertyChanged("MyLabelText");
+                OnPropertyChanged(nameof(MyLabelText));
             }
         }
 
