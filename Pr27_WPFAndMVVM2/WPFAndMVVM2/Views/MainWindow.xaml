@@ -17,13 +17,13 @@
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <ListBox Grid.Row="0">
+            <ListBox ItemsSource="{Binding PersonsVM}" Grid.Row="0">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="FirstName"/>
+                            <TextBlock Text="{Binding FirstName}"/>
 							<TextBlock Text=" "/>
-							<TextBlock Text="LastName"/>
+							<TextBlock Text="{Binding LastName}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
