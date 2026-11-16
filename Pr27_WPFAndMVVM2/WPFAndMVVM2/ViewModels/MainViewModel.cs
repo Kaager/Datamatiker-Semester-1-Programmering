@@ -8,10 +8,17 @@ namespace WPFAndMVVM2.ViewModels
     public class MainViewModel
     {
         private PersonRepository personRepo;
+        public List<PersonViewModel> PersonsVM { get; set; }
 
         public MainViewModel()
         {
             personRepo = new PersonRepository();
+
+            PersonsVM = new();
+            foreach (Person person in personRepo.GetAll())
+            {
+                PersonsVM.Add(new PersonViewModel(person));
+            }
         }
     }
 }
