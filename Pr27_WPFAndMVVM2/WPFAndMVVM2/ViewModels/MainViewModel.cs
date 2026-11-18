@@ -9,6 +9,7 @@ namespace WPFAndMVVM2.ViewModels
     {
         private PersonRepository personRepo;
         public List<PersonViewModel> PersonsVM { get; set; }
+        public PersonViewModel SelectedPersonVM { get; set; } 
 
         public MainViewModel()
         {
