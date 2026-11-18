@@ -21,5 +21,10 @@ namespace WPFAndMVVM2.ViewModels
             Age = person.Age;
             Phone = person.Phone;
         }
+
+        public void DeletePerson(PersonRepository pRepo)
+        {
+            pRepo.Remove(person.Id);
+        }
     }
 }

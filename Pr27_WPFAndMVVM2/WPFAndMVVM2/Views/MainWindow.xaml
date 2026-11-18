@@ -30,7 +30,7 @@
             </ListBox>
             <StackPanel Orientation="Horizontal" Grid.Row="1">
                 <Button x:Name="newPersonButton" Content="New" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,5,10,5" Width="80" Click="newPersonButton_Click"/>
-                <Button x:Name="deletePersonButton" Content="Delete" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,5" Width="80"/>
+                <Button x:Name="deletePersonButton" Content="Delete" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,10,5" Width="80" Click="deletePersonButton_Click"/>
             </StackPanel>
         </Grid>
 

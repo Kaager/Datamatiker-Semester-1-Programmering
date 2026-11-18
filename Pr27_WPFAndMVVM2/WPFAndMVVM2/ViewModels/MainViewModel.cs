@@ -42,6 +42,15 @@ namespace WPFAndMVVM2.ViewModels
             SelectedPersonVM = newPersonVM;
         }
 
+        public void DeleteSelectedPerson()
+        {
+            if (SelectedPersonVM is not null)
+            {
+                SelectedPersonVM.DeletePerson(personRepo);
+                PersonsVM.Remove(SelectedPersonVM);
+            }
+        }
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
