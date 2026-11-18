@@ -35,8 +35,8 @@
 
         <GridSplitter Width="5" Grid.Column="1" HorizontalAlignment="Stretch"/>
         <Grid Grid.Column="2">
-            <TextBox Text="{Binding SelectedPersonVM.FirstName}" Height="20" VerticalAlignment="Top" Margin="170,62,171,0"/>
-            <TextBox Text="{Binding SelectedPersonVM.LastName}" Height="20" Margin="170,109,171,0" VerticalAlignment="Top" />
+            <TextBox Text="{Binding SelectedPersonVM.FirstName, UpdateSourceTrigger=PropertyChanged}"  Height="20" VerticalAlignment="Top" Margin="170,62,171,0"/>
+            <TextBox Text="{Binding SelectedPersonVM.LastName, UpdateSourceTrigger=PropertyChanged}" Height="20" Margin="170,109,171,0" VerticalAlignment="Top" />
             <TextBox Text="{Binding SelectedPersonVM.Age}" Height="20" Margin="170,158,171,0" VerticalAlignment="Top"/>
             <TextBox Text="{Binding SelectedPersonVM.Phone}" Height="20" Margin="170,204,171,0" VerticalAlignment="Top"/>
             <Label Content="FirstName:" HorizontalAlignment="Left" Margin="67,59,0,0" VerticalAlignment="Top"/>
