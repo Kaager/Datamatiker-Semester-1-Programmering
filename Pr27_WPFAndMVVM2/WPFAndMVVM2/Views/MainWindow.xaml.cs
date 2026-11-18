@@ -28,5 +28,11 @@ namespace WPFAndMVVM2
             InitializeComponent();
             DataContext = mvm;
         }
+
+        private void newPersonButton_Click(object sender, RoutedEventArgs e)
+        {
+            mvm.AddDefaultPerson();
+            PersonsListBox.ScrollIntoView(mvm.SelectedPersonVM);
+        }
     }
 }
