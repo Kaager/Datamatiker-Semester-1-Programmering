@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Pr31_ObserverPattern/Pr31_ObserverPattern.csproj" />
+  <Project Path="TestProject1/TestProject1.csproj" />
+</Solution>
