@@ -4,23 +4,22 @@
     {
         static void Main(string[] args)
         {
-            Academy academy = new Academy("UCL");
+            Academy p = new Academy("UCL", "Seebladsgade");
 
-            Student student1 = new Student(academy, "Jens");
-            Student student2 = new Student(academy, "Niels");
-            Student student3 = new Student(academy, "Susan");
+            Student s1 = new Student(p, "Jens");
+            Student s2 = new Student(p, "Niels");
+            Student s3 = new Student(p, "Susan");
 
-            academy.Attach(student1);
-            academy.Attach(student2);
-            academy.Attach(student3);
+            p.Attach(s1);
+            p.Attach(s2);
+            p.Attach(s3);
 
-            academy.Message = "Så er der julefrokost!";
+            p.Message = "Så er der julefrokost!";
 
-            academy.Detach(student2);
+            p.Detach(s2);
 
-            academy.Message = "Så er der fredagsbar!";
+            p.Message = "Så er der fredagsbar!";
 
-            Console.ReadLine();
         }
 
     }

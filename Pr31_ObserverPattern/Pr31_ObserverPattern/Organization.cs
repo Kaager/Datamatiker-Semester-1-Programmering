@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Pr31_ObserverPattern
 {
-    internal class Organization
+    public class Organization
     {
         public string Name { get; }
         public string Address { get; set; }

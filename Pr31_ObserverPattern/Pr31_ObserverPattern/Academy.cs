@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Pr31_ObserverPattern
 {
-    public class Academy : Subject
+    public class Academy : Organization, ISubject
     {
-        public string Name { get; }
+        private List<IObserver> _students = new();
         private string _message;
         public string Message
         {
@@ -18,9 +18,28 @@ namespace Pr31_ObserverPattern
             }
         }
 
-        public Academy(string name)
+        public Academy(string name, string address) 
+            : base(name)
         {
-            Name = name;
+            Address = address;
+        }
+
+        public void Attach(IObserver o)
+        {
+            _students.Add(o);
+        }
+
+        public void Detach(IObserver o)
+        {
+            _students.Remove(o);
+        }
+
+        public void Notify()
+        {
+            foreach(IObserver o in _students)
+            {
+                o.Update();
+            }
         }
     }
 }
