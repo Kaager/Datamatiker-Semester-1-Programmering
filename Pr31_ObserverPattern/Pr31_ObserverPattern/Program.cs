@@ -4,11 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Academy p = new Academy("UCL", "Seebladsgade");
+            ISubject p = new Academy("UCL", "Seebladsgade");
 
-            Student s1 = new Student(p, "Jens");
-            Student s2 = new Student(p, "Niels");
-            Student s3 = new Student(p, "Susan");
+            IObserver s1 = new Student(p, "Jens");
+            IObserver s2 = new Student(p, "Niels");
+            IObserver s3 = new Student(p, "Susan");
 
             p.Attach(s1);
             p.Attach(s2);
@@ -19,7 +19,6 @@
             p.Detach(s2);
 
             p.Message = "Så er der fredagsbar!";
-
         }
 
     }

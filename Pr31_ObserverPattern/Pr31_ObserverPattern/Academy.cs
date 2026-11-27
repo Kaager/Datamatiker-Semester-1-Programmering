@@ -6,7 +6,8 @@ namespace Pr31_ObserverPattern
 {
     public class Academy : Organization, ISubject
     {
-        private List<IObserver> _students = new();
+        //private List<IObserver> _students = new();
+        private NotifyHandler _students;
         private string _message;
         public string Message
         {

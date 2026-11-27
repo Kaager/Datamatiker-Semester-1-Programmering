@@ -6,10 +6,10 @@ namespace Pr31_ObserverPattern
 {
     public class Student : Person, IObserver
     {
-        private Academy _subject;
+        private ISubject _subject;
         public string Message { get; set; }
         
-        public Student(Academy subject, string name)
+        public Student(ISubject subject, string name)
             : base(name)
         {
             _subject = subject;
